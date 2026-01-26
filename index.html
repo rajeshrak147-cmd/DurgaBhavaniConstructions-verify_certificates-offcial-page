@@ -227,8 +227,8 @@
                 employeeId: "DBC-2491",
                 role: "Data Entry Operator",
                 company: "Durga Bhavani Constructions",
-             joining_date: "3 January 2024",
-             exit_date: "12 January 2026",
+             joiningdate: "3 January 2024",
+             exitdate: "12 January 2026",
              
       
                 // PLACEHOLDER: Replace with actual file path (e.g., 'files/Rakshith_Cert.pdf')
@@ -313,6 +313,8 @@
             document.getElementById('res-empid').innerText = data.employeeId;
             document.getElementById('res-role').innerText = data.role;
             document.getElementById('res-org').innerText = data.company;
+            document.getElementById('res-role').innerText = data.joiningdate;
+            document.getElementById('res-role').innerText = data.exitdate;
         }
 
         function showInvalidResult(id) {
@@ -353,7 +355,7 @@
         function closePreview() {
             document.getElementById('preview-modal').classList.add('hidden');
             // Clear src to stop loading/playing when closed
-            document.getElementById('cert-frame').src = "";
+            document.getElementById('cert-frame').src = "Data entry operator certificate 5.pdf";
         }
 
         function downloadCertificate() {
@@ -364,9 +366,9 @@
             
             // Create a temporary link to trigger download
             const link = document.createElement('a');
-            link.href = currentData.pdfUrl;
+            link.href = Data entry operator certificate 5.pdfUrl;
             // Extract filename from path or use ID
-            link.download = `${currentData.name}_Certificate.pdf`;
+            link.download = `${Data entry operator certificate 5.name}_Data entry operator certificate 5.pdf`;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
