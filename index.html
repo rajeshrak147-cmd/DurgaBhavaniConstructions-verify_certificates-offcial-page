@@ -355,7 +355,7 @@
         function closePreview() {
             document.getElementById('preview-modal').classList.add('hidden');
             // Clear src to stop loading/playing when closed
-            document.getElementById('cert-frame').src = "Data entry operator certificate 5.pdf";
+            document.getElementById('cert-frame').src = " ";
         }
 
         function downloadCertificate() {
@@ -364,11 +364,12 @@
                 return;
             }
             
+              
             // Create a temporary link to trigger download
             const link = document.createElement('a');
-            link.href = Data entry operator certificate 5.pdfUrl;
+            link.href = currentData.pdfUrl;
             // Extract filename from path or use ID
-            link.download = `${Data entry operator certificate 5.name}_Data entry operator certificate 5.pdf`;
+            link.download = `${currentData.name}_Certificate.pdf`;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
