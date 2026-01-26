@@ -60,7 +60,7 @@
             </svg>
             <span class="font-medium">Durga Bhavani Constructions Secure Portal</span>
         </div>
-        <div class="text-xs text-gray-400">Ver 3.2 (DBC)</div>
+        <div class="text-xs text-gray-400">Ver 3.3 (DBC)</div>
     </div>
 
     <!-- Main Container -->
@@ -69,8 +69,8 @@
         <!-- Header -->
         <div class="brand-bg p-8 text-center relative overflow-hidden">
             <div class="relative z-10">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg border-2 border-yellow-500">
-                    <!-- Construction Icon -->
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg border-2 border-yellow-500 overflow-hidden">
+                    <!-- Construction Icon Replaced with SVG for better preview -->
                      <img src="logooo.png" alt="">
                 </div>
                 <h1 class="text-2xl font-bold text-white tracking-wide uppercase">Durga Bhavani<br>Constructions</h1>
@@ -136,6 +136,16 @@
                         <span class="text-gray-500">Organization</span>
                         <span id="res-org" class="text-brand-color font-bold"></span>
                     </div>
+                    <!-- NEW FIELDS -->
+                    <div class="flex justify-between border-b border-gray-100 pb-2">
+                        <span class="text-gray-500">Joining Date</span>
+                        <span id="res-join" class="font-medium text-gray-800"></span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-100 pb-2">
+                        <span class="text-gray-500">Exit Date</span>
+                        <span id="res-exit" class="font-medium text-gray-800"></span>
+                    </div>
+                    <!-- END NEW FIELDS -->
                     <div class="flex justify-between border-b border-gray-100 pb-2">
                         <span class="text-gray-500">Status</span>
                         <span class="text-green-600 font-bold bg-green-50 px-2 rounded-full text-xs py-0.5">ACTIVE RECORD</span>
@@ -202,7 +212,7 @@
 
             <!-- PDF Iframe Container -->
             <div class="flex-1 bg-gray-100 p-2 overflow-hidden flex flex-col">
-                <iframe id="cert-frame" src="d3.pdf" class="w-full flex-1 border rounded bg-white"></iframe>
+                <iframe id="cert-frame" src="" class="w-full flex-1 border rounded bg-white"></iframe>
                 <div class="text-center p-2 bg-white border-t text-sm text-gray-500">
                     If the document doesn't load: <a href="#" id="fallback-link" target="_blank" class="text-blue-600 hover:underline font-semibold">Open PDF in new tab</a>
                 </div>
@@ -219,6 +229,8 @@
                 employeeId: "DBC-2491",
                 role: "Data Entry Operator",
                 company: "Durga Bhavani Constructions",
+                joiningDate: "3 January 2024",
+                exitDate: "12 January 2026",
                 // PLACEHOLDER: Replace with actual file path (e.g., 'files/Rakshith_Cert.pdf')
                 pdfUrl: "d3.pdf" 
             },
@@ -227,6 +239,8 @@
                 employeeId: "DBC-001",
                 role: "Site Engineer",
                 company: "Durga Bhavani Constructions",
+                joiningDate: "15 August 2023",
+                exitDate: "Active",
                 pdfUrl: "assets/certificates/DBC-001.pdf"
             },
              "DBC-2026-002": {
@@ -234,6 +248,8 @@
                 employeeId: "DBC-002",
                 role: "Senior Architect",
                 company: "Durga Bhavani Constructions",
+                joiningDate: "10 March 2022",
+                exitDate: "Active",
                 pdfUrl: "assets/certificates/DBC-002.pdf"
             }
         };
@@ -301,6 +317,8 @@
             document.getElementById('res-empid').innerText = data.employeeId;
             document.getElementById('res-role').innerText = data.role;
             document.getElementById('res-org').innerText = data.company;
+            document.getElementById('res-join').innerText = data.joiningDate || "N/A";
+            document.getElementById('res-exit').innerText = data.exitDate || "Active";
         }
 
         function showInvalidResult(id) {
