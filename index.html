@@ -92,7 +92,7 @@
                     </div>
                     <input type="text" id="serial" 
                         class="focus:ring-[#8B0000] focus:border-[#8B0000] block w-full pl-10 pr-12 sm:text-lg border-gray-300 rounded-lg p-3 border uppercase tracking-widest placeholder-gray-300" 
-                        placeholder="CERT-DEP-202X-XXX"
+                        placeholder="DBC-202X-XXX"
                         onkeypress="handleEnter(event)">
                 </div>
                 
@@ -130,14 +130,6 @@
                     </div>
                     <div class="flex justify-between border-b border-gray-100 pb-2">
                         <span class="text-gray-500">Designation</span>
-                        <span id="res-role" class="font-semibold text-gray-700"></span>
-                    </div>
-                  <div class="flex justify-between border-b border-gray-100 pb-2">
-                        <span class="text-gray-500">Joining Date</span>
-                        <span id="res-role" class="font-semibold text-gray-700"></span>
-                    </div>
-                  <div class="flex justify-between border-b border-gray-100 pb-2">
-                        <span class="text-gray-500">Exit Date</span>
                         <span id="res-role" class="font-semibold text-gray-700"></span>
                     </div>
                     <div class="flex justify-between border-b border-gray-100 pb-2">
@@ -227,12 +219,8 @@
                 employeeId: "DBC-2491",
                 role: "Data Entry Operator",
                 company: "Durga Bhavani Constructions",
-             joiningdate: "3 January 2024",
-             exitdate: "12 January 2026",
-             
-      
                 // PLACEHOLDER: Replace with actual file path (e.g., 'files/Rakshith_Cert.pdf')
-                pdfUrl: " Data entry operator certficate 5.pdf" 
+                pdfUrl: "Data entry operator certficate 5.pdf" 
             },
             "DBC-2026-001": {
                 name: "John Smith",
@@ -313,8 +301,6 @@
             document.getElementById('res-empid').innerText = data.employeeId;
             document.getElementById('res-role').innerText = data.role;
             document.getElementById('res-org').innerText = data.company;
-            document.getElementById('res-role').innerText = data.joiningdate;
-            document.getElementById('res-role').innerText = data.exitdate;
         }
 
         function showInvalidResult(id) {
@@ -355,7 +341,7 @@
         function closePreview() {
             document.getElementById('preview-modal').classList.add('hidden');
             // Clear src to stop loading/playing when closed
-            document.getElementById('cert-frame').src = " ";
+            document.getElementById('cert-frame').src = "";
         }
 
         function downloadCertificate() {
@@ -364,7 +350,6 @@
                 return;
             }
             
-              
             // Create a temporary link to trigger download
             const link = document.createElement('a');
             link.href = currentData.pdfUrl;
