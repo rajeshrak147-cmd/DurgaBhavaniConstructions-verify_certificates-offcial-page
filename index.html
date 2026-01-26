@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Official Credential Verification Portal</title>
+    <title>Durga Bhavani Constructions - Verification Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -14,25 +14,22 @@
             background-size: 20px 20px;
         }
         
-        .brand-color { color: #6D2932; }
-        .brand-bg { background-color: #6D2932; }
-        .brand-bg-hover:hover { background-color: #562028; }
-        .brand-border { border-color: #6D2932; }
+        .brand-color { color: #8B0000; /* Dark Red for Construction/Strong look */ }
+        .brand-bg { background-color: #8B0000; }
+        .brand-bg-hover:hover { background-color: #660000; }
+        .brand-border { border-color: #8B0000; }
 
         .loader {
             border: 3px solid #f3f3f3;
             border-radius: 50%;
-            border-top: 3px solid #6D2932;
+            border-top: 3px solid #8B0000;
             width: 24px;
             height: 24px;
-            -webkit-animation: spin 1s linear infinite; /* Safari */
+            -webkit-animation: spin 1s linear infinite;
             animation: spin 1s linear infinite;
         }
 
-        /* Fade in animation */
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
 
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -61,31 +58,23 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
-            <span class="font-medium">Secure Verification Environment</span>
+            <span class="font-medium">Durga Bhavani Constructions Secure Portal</span>
         </div>
-        <div class="text-xs text-gray-400">Ver 2.4.0 (Global)</div>
+        <div class="text-xs text-gray-400">Ver 3.2 (DBC)</div>
     </div>
 
     <!-- Main Container -->
-    <div class="w-full max-w-lg bg-white rounded-xl shadow-2xl overflow-hidden mt-12 relative fade-in border border-gray-100">
+    <div class="w-full max-w-lg bg-white rounded-xl shadow-2xl overflow-hidden mt-12 relative fade-in border border-gray-100 z-0">
         
         <!-- Header -->
         <div class="brand-bg p-8 text-center relative overflow-hidden">
-            <!-- Decorative circle -->
-            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#FFFFFF" d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.2,-19.2,95.8,-5.3C93.4,8.6,81.8,21.5,70.5,32.4C59.2,43.3,48.1,52.2,36,58.7C23.9,65.2,10.8,69.3,-1.2,71.4C-13.2,73.5,-24.1,73.6,-34.7,68.9C-45.3,64.2,-55.6,54.7,-64.5,43.6C-73.4,32.5,-80.9,19.8,-82.7,6.4C-84.5,-7,-80.6,-21.1,-72.6,-32.8C-64.6,-44.5,-52.5,-53.8,-39.9,-61.7C-27.3,-69.6,-14.2,-76.1,0.5,-77C15.2,-77.8,30.5,-73.1,44.7,-76.4Z" transform="translate(100 100)" />
-                </svg>
-            </div>
-
             <div class="relative z-10">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 brand-color" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg border-2 border-yellow-500">
+                    <!-- Construction Icon -->
+                     <img src="logooo.png" alt="">
                 </div>
-                <h1 class="text-2xl font-bold text-white tracking-wide">Credential Verification</h1>
-                <p class="text-red-100 text-sm mt-1">Global Employment Database</p>
+                <h1 class="text-2xl font-bold text-white tracking-wide uppercase">Durga Bhavani<br>Constructions</h1>
+                <p class="text-yellow-100 text-sm mt-2 font-light">Official Verification Portal</p>
             </div>
         </div>
 
@@ -94,7 +83,7 @@
             
             <!-- Search State (Default) -->
             <div id="search-container">
-                <label for="serial" class="block text-sm font-medium text-gray-700 mb-2">Certificate Serial Number</label>
+                <label for="serial" class="block text-sm font-medium text-gray-700 mb-2">Certificate Serial Number / Employee ID</label>
                 <div class="relative rounded-md shadow-sm">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -102,26 +91,22 @@
                         </svg>
                     </div>
                     <input type="text" id="serial" 
-                        class="focus:ring-[#6D2932] focus:border-[#6D2932] block w-full pl-10 pr-12 sm:text-lg border-gray-300 rounded-lg p-3 border uppercase tracking-widest placeholder-gray-300" 
-                        placeholder="CERT-DEP-2026-XXX"
+                        class="focus:ring-[#8B0000] focus:border-[#8B0000] block w-full pl-10 pr-12 sm:text-lg border-gray-300 rounded-lg p-3 border uppercase tracking-widest placeholder-gray-300" 
+                        placeholder="DBC-202X-XXX"
                         onkeypress="handleEnter(event)">
                 </div>
-                <p class="text-xs text-gray-400 mt-2 flex items-center">
-                    <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    Case insensitive search
-                </p>
-
+                
                 <button onclick="initiateVerification()" 
                     class="mt-6 w-full brand-bg brand-bg-hover text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex justify-center items-center">
-                    Verify Authenticity
+                    Verify Employee
                 </button>
             </div>
 
             <!-- Loading State (Hidden) -->
             <div id="loading-container" class="hidden text-center py-8">
                 <div class="loader mx-auto mb-4"></div>
-                <h3 class="text-gray-800 font-semibold text-lg">Validating...</h3>
-                <p id="loading-text" class="text-sm text-gray-500 mt-2">Connecting to registry...</p>
+                <h3 class="text-gray-800 font-semibold text-lg">Searching Database...</h3>
+                <p id="loading-text" class="text-sm text-gray-500 mt-2">Connecting to Durga Bhavani Records...</p>
             </div>
 
             <!-- Result: VALID (Hidden) -->
@@ -129,45 +114,46 @@
                 <div class="verified-badge text-white p-4 rounded-lg shadow-inner mb-6 flex items-center justify-center">
                     <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <div>
-                        <h2 class="font-bold text-lg leading-tight">Authentic Certificate</h2>
-                        <p class="text-xs opacity-90">Verified against Database Record</p>
+                        <h2 class="font-bold text-lg leading-tight">Verified Employee</h2>
+                        <p class="text-xs opacity-90">Durga Bhavani Constructions Record Found</p>
                     </div>
                 </div>
 
-                <div class="space-y-4">
-                    <div class="grid grid-cols-3 gap-2 pb-3 border-b border-gray-100">
-                        <span class="text-gray-500 text-xs uppercase tracking-wider col-span-1 flex items-center">Candidate</span>
-                        <span id="res-name" class="font-bold text-gray-800 col-span-2 text-right text-lg"></span>
+                <div class="space-y-4 text-sm">
+                    <div class="flex justify-between border-b border-gray-100 pb-2">
+                        <span class="text-gray-500">Name</span>
+                        <span id="res-name" class="font-bold text-gray-800"></span>
                     </div>
-                    
-                    <div class="grid grid-cols-3 gap-2 pb-3 border-b border-gray-100">
-                        <span class="text-gray-500 text-xs uppercase tracking-wider col-span-1 flex items-center">Designation</span>
-                        <span id="res-role" class="font-semibold text-gray-700 col-span-2 text-right"></span>
+                    <div class="flex justify-between border-b border-gray-100 pb-2">
+                        <span class="text-gray-500">Employee ID</span>
+                        <span id="res-empid" class="font-mono font-medium text-gray-600"></span>
                     </div>
-
-                    <div class="grid grid-cols-3 gap-2 pb-3 border-b border-gray-100">
-                        <span class="text-gray-500 text-xs uppercase tracking-wider col-span-1 flex items-center">Organization</span>
-                        <span id="res-org" class="text-gray-600 col-span-2 text-right"></span>
+                    <div class="flex justify-between border-b border-gray-100 pb-2">
+                        <span class="text-gray-500">Designation</span>
+                        <span id="res-role" class="font-semibold text-gray-700"></span>
                     </div>
-
-                    <div class="grid grid-cols-3 gap-2 pb-3 border-b border-gray-100">
-                        <span class="text-gray-500 text-xs uppercase tracking-wider col-span-1 flex items-center">Issue Date</span>
-                        <span id="res-date" class="text-gray-600 col-span-2 text-right"></span>
+                    <div class="flex justify-between border-b border-gray-100 pb-2">
+                        <span class="text-gray-500">Organization</span>
+                        <span id="res-org" class="text-brand-color font-bold"></span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-100 pb-2">
+                        <span class="text-gray-500">Status</span>
+                        <span class="text-green-600 font-bold bg-green-50 px-2 rounded-full text-xs py-0.5">ACTIVE RECORD</span>
                     </div>
                 </div>
 
-                <div class="mt-6 bg-gray-50 p-3 rounded border border-gray-200">
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-1">Digital Signature Hash</p>
-                    <p id="res-hash" class="text-xs font-mono text-gray-500 break-all"></p>
-                </div>
-
-                <div class="flex space-x-3 mt-6">
-                    <button onclick="resetSearch()" class="flex-1 bg-white border border-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-50 text-sm font-medium">
-                        Verify Another
+                <!-- Action Buttons -->
+                <div class="grid grid-cols-2 gap-3 mt-6">
+                    <button onclick="previewCertificate()" class="col-span-1 bg-gray-800 hover:bg-gray-900 text-white py-2.5 rounded-lg text-sm font-medium flex justify-center items-center transition">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        Preview Cert
                     </button>
-                    <button onclick="window.print()" class="flex-1 brand-bg text-white py-2 rounded-lg hover:opacity-90 text-sm font-medium flex justify-center items-center">
-                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
-                        Print Record
+                    <button onclick="downloadCertificate()" class="col-span-1 brand-bg hover:opacity-90 text-white py-2.5 rounded-lg text-sm font-medium flex justify-center items-center transition">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Download PDF
+                    </button>
+                    <button onclick="resetSearch()" class="col-span-2 bg-white border border-gray-300 text-gray-600 py-2 rounded-lg hover:bg-gray-50 text-sm font-medium">
+                        Verify Another ID
                     </button>
                 </div>
             </div>
@@ -177,58 +163,88 @@
                 <div class="invalid-badge w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </div>
-                <h2 class="text-xl font-bold text-gray-800 mb-2">Verification Failed</h2>
-                <p class="text-gray-500 mb-6">The certificate ID <span id="invalid-id" class="font-mono bg-red-50 text-red-600 px-1 rounded"></span> could not be found in the global registry or has been revoked.</p>
-                
-                <div class="bg-red-50 border-l-4 border-red-500 p-4 text-left mb-6">
-                    <p class="text-sm text-red-700"><strong>Note:</strong> If you believe this is an error, please contact the issuing authority directly.</p>
-                </div>
-
+                <h2 class="text-xl font-bold text-gray-800 mb-2">Record Not Found</h2>
+                <p class="text-gray-500 mb-6">The ID <span id="invalid-id" class="font-mono bg-red-50 text-red-600 px-1 rounded"></span> is not in our active database.</p>
                 <button onclick="resetSearch()" class="w-full bg-gray-800 text-white py-3 rounded-lg hover:bg-gray-900 transition font-medium">
                     Try Again
                 </button>
             </div>
-
         </div>
         
         <!-- Footer -->
         <div class="bg-gray-50 px-8 py-4 border-t border-gray-200 flex justify-between items-center">
             <div class="flex items-center space-x-1">
                 <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span class="text-xs text-gray-500 font-medium">System Online</span>
+                <span class="text-xs text-gray-500 font-medium">Database Online</span>
             </div>
-            <img src="https://via.placeholder.com/80x25?text=SECURED" alt="Security Badge" class="opacity-50 grayscale">
+            <div class="text-xs text-gray-400 font-bold">DBC SECURE</div>
         </div>
     </div>
     
     <div class="mt-6 text-center text-gray-400 text-xs">
-        &copy; 2026 Certification Authority. All rights reserved.<br>Protected by 256-bit SSL Encryption.
+        &copy; 2026 Durga Bhavani Constructions.<br>All rights reserved.
+    </div>
+
+    <!-- PDF PREVIEW MODAL -->
+    <div id="preview-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-4xl h-[85vh] flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="p-4 border-b flex justify-between items-center bg-gray-50">
+                <h3 class="font-bold text-gray-700">Certificate Preview</h3>
+                <div class="flex space-x-2">
+                    <button onclick="downloadCertificate()" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">Download</button>
+                    <button onclick="closePreview()" class="text-gray-500 hover:text-red-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- PDF Iframe Container -->
+            <div class="flex-1 bg-gray-100 p-2 overflow-hidden flex flex-col">
+                <iframe id="cert-frame" src="Data entry operator certficate 5.pdf" class="w-full flex-1 border rounded bg-white"></iframe>
+                <div class="text-center p-2 bg-white border-t text-sm text-gray-500">
+                    If the document doesn't load: <a href="#" id="fallback-link" target="_blank" class="text-blue-600 hover:underline font-semibold">Open PDF in new tab</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Enhanced Database
+        // --- DATABASE ---
+        // IMPORTANT: Update 'pdfUrl' with the actual paths to your PDF files on your server/hosting
         const certificates = {
             "CERT-DEP-2026-572": {
                 name: "Rakshith Pippari",
+                employeeId: "DBC-2491",
                 role: "Data Entry Operator",
-                company: "Durga Bhavani Constructions Pvt. Ltd.",
-                issueDate: "January 12, 2026",
-                hash: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                company: "Durga Bhavani Constructions",
+                // PLACEHOLDER: Replace with actual file path (e.g., 'files/Rakshith_Cert.pdf')
+                pdfUrl: " data entry operator certficate 5.pdf" 
             },
-            "DEMO-USER-001": {
-                name: "Jane Doe",
-                role: "Senior Project Manager",
-                company: "Tech Global Solutions",
-                issueDate: "March 20, 2025",
-                hash: "a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef0"
+            "DBC-2026-001": {
+                name: "John Smith",
+                employeeId: "DBC-001",
+                role: "Site Engineer",
+                company: "Durga Bhavani Constructions",
+                pdfUrl: "assets/certificates/DBC-001.pdf"
+            },
+             "DBC-2026-002": {
+                name: "Priya Sharma",
+                employeeId: "DBC-002",
+                role: "Senior Architect",
+                company: "Durga Bhavani Constructions",
+                pdfUrl: "assets/certificates/DBC-002.pdf"
             }
         };
 
+        let currentData = null;
+
         const loadingTexts = [
-            "Handshaking with secure server...",
-            "Verifying cryptographic signature...",
-            "Querying global ledger...",
-            "Finalizing validation..."
+            "Connecting to DBC Server...",
+            "Verifying Employee Records...",
+            "Checking Documents...",
+            "Retrieving File..."
         ];
 
         function handleEnter(e) {
@@ -239,7 +255,7 @@
             const inputVal = document.getElementById('serial').value.trim().toUpperCase();
             
             if (!inputVal) {
-                alert("Please enter a Certificate Serial Number.");
+                alert("Please enter a Certificate Serial Number or ID.");
                 return;
             }
 
@@ -249,37 +265,42 @@
             document.getElementById('result-invalid').classList.add('hidden');
             document.getElementById('result-valid').classList.add('hidden');
 
-            // Simulate Network Request with dynamic text
+            // Simulate Network
             const textElement = document.getElementById('loading-text');
             let step = 0;
-            
             const interval = setInterval(() => {
-                textElement.innerText = loadingTexts[step];
-                step++;
-                if (step >= loadingTexts.length) clearInterval(interval);
-            }, 600);
+                if(step < loadingTexts.length) {
+                    textElement.innerText = loadingTexts[step];
+                    step++;
+                }
+            }, 500);
 
-            // Final Result (Simulated Delay: 2.5s)
+            // Final Result
             setTimeout(() => {
+                clearInterval(interval);
                 document.getElementById('loading-container').classList.add('hidden');
                 
-                if (certificates[inputVal]) {
-                    showValidResult(certificates[inputVal]);
+                // Flexible search
+                let foundKey = Object.keys(certificates).find(key => key === inputVal || certificates[key].employeeId === inputVal);
+
+                if (foundKey) {
+                    currentData = certificates[foundKey];
+                    showValidResult(currentData);
                 } else {
+                    currentData = null;
                     showInvalidResult(inputVal);
                 }
-            }, 2500);
+            }, 2000);
         }
 
         function showValidResult(data) {
             document.getElementById('result-valid').classList.remove('hidden');
             
-            // Populate Data
+            // Populate Main Result
             document.getElementById('res-name').innerText = data.name;
+            document.getElementById('res-empid').innerText = data.employeeId;
             document.getElementById('res-role').innerText = data.role;
             document.getElementById('res-org').innerText = data.company;
-            document.getElementById('res-date').innerText = data.issueDate;
-            document.getElementById('res-hash').innerText = data.hash;
         }
 
         function showInvalidResult(id) {
@@ -292,6 +313,51 @@
             document.getElementById('result-valid').classList.add('hidden');
             document.getElementById('result-invalid').classList.add('hidden');
             document.getElementById('search-container').classList.remove('hidden');
+            currentData = null;
+        }
+
+        // --- NEW FILE HANDLING FEATURES ---
+
+        function previewCertificate() {
+            if(!currentData || !currentData.pdfUrl) {
+                alert("Certificate file not found in database.");
+                return;
+            }
+            
+            // Set iframe src to the PDF URL
+            const iframe = document.getElementById('cert-frame');
+            iframe.src = currentData.pdfUrl;
+            
+            // Set fallback link just in case
+            const fallbackLink = document.getElementById('fallback-link');
+            if (fallbackLink) {
+                fallbackLink.href = currentData.pdfUrl;
+            }
+
+            // Show Modal
+            document.getElementById('preview-modal').classList.remove('hidden');
+        }
+
+        function closePreview() {
+            document.getElementById('preview-modal').classList.add('hidden');
+            // Clear src to stop loading/playing when closed
+            document.getElementById('cert-frame').src = "";
+        }
+
+        function downloadCertificate() {
+            if(!currentData || !currentData.pdfUrl) {
+                alert("No file linked to this record.");
+                return;
+            }
+            
+            // Create a temporary link to trigger download
+            const link = document.createElement('a');
+            link.href = currentData.pdfUrl;
+            // Extract filename from path or use ID
+            link.download = `${currentData.name}_Certificate.pdf`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
